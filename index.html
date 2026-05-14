@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="TGpWkHEwiodMUCcCHaThDbRay5z30KBOmsSOeyox2XA" />
+    <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RenderFast – Fast Websites Guaranteed</title>
     <meta name="description" content="RenderFast builds 90+ PageSpeed websites for dental practices, medical offices, law firms, veterinary clinics, and home services. Guaranteed.">
@@ -177,6 +177,62 @@
             background: rgba(16, 185, 129, 0.1);
             border: 2px solid rgba(16, 185, 129, 0.3);
         }
+        .ada-section {
+            background: rgba(239, 68, 68, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+        }
+        .form-section {
+            background: rgba(255,255,255,0.03);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 1rem;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #10b981;
+        }
+        .submit-button {
+            background: #10b981;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .submit-button:hover {
+            transform: scale(1.02);
+            background: #059669;
+        }
+        .contact-note {
+            background: rgba(16, 185, 129, 0.1);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
         @media (max-width: 640px) {
             h1 { font-size: 2rem; }
             body { padding: 1rem; }
@@ -200,13 +256,30 @@
                     <div>Mobile Speed</div>
                 </div>
                 <div class="score-card">
-                    <div class="score-number">97/100</div>
+                    <div class="score-number">100/100</div>
                     <div>Desktop Speed</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-number">100/100</div>
+                    <div>Accessibility</div>
                 </div>
                 <div class="score-card">
                     <div class="score-number">100/100</div>
                     <div>SEO</div>
                 </div>
+            </div>
+
+            <!-- ADA Compliance Section -->
+            <div class="ada-section">
+                <h2 style="color: #ef4444; margin-bottom: 1rem;">⚠️ ADA Compliance Risk is Real</h2>
+                <p style="margin-bottom: 1rem;">Dental and medical offices are frequent targets for accessibility lawsuits. Over <strong>4,000 ADA website lawsuits</strong> were filed in 2025, with average settlements of $5k–$25k+.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+                    <div style="background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.5rem; flex: 1;">✓ Color contrast problems</div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.5rem; flex: 1;">✓ Missing alt text & ARIA labels</div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.5rem; flex: 1;">✓ Keyboard navigation</div>
+                    <div style="background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.5rem; flex: 1;">✓ Screen reader compatibility</div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.875rem; color: #94a3b8;">All my packages include ADA compliance fixes to protect your business.</p>
             </div>
 
             <div class="industries">
@@ -262,17 +335,58 @@
                 </div>
             </div>
 
-            <div style="text-align: center; margin: 1rem 0 2rem 0;">
-                <a href="mailto:laborflowusa@gmail.com?subject=Free%20Speed%20Report%20Request&body=My%20website%20URL%20is%3A%20" class="cta-button">📧 Get Free Speed Report →</a>
+            <!-- Free Audit Request Form -->
+            <div class="form-section" id="audit-form">
+                <h2 style="text-align: center; margin-bottom: 1.5rem;">📋 Request Your Free Website Audit</h2>
+                <form action="https://formsubmit.co/laborflowusa@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Free Audit Request from RenderFast">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://voyager-renderfast.onrender.com?thankyou=1">
+                    
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Dr. John Lawrence">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="drlawrence@cedarcreekdental.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="website">Website URL *</label>
+                        <input type="url" id="website" name="website" required placeholder="https://www.cmlawrencedmd.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="business">Business Type</label>
+                        <select id="business" name="business">
+                            <option value="Dental Practice">🦷 Dental Practice</option>
+                            <option value="Medical Office">🩺 Medical Office</option>
+                            <option value="Law Firm">⚖️ Law Firm</option>
+                            <option value="Veterinary Clinic">🐾 Veterinary Clinic</option>
+                            <option value="Home Services">🔧 Home Services</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <button type="submit" class="submit-button">📧 Send My Free Audit Request →</button>
+                    </div>
+                </form>
+                <div class="contact-note">
+                    📧 <strong>Email is best</strong> – I respond within 24 hours. I do not use phone due to voice limitations, but I am highly responsive via email.
+                </div>
             </div>
-            
+
             <div class="proof-link">
                 🧭 <strong>Live proof:</strong> <a href="https://voyager-flask.onrender.com" target="_blank">VOYAGER-X – 100/100 PageSpeed</a>
             </div>
             
             <footer>
-                RenderFast Web Development • Built on Render.com • Fast websites. Guaranteed.<br>
-                Serving Allentown, PA & Lehigh Valley – and clients nationwide
+                Voyager Web Development • Built on Render.com • Fast websites. Guaranteed.<br>
+                Serving Allentown, PA & Lehigh Valley – and clients nationwide<br>
+                📧 laborflowusa@gmail.com • Email preferred (voice limitations)
             </footer>
         </div>
     </main>
