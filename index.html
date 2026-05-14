@@ -101,6 +101,22 @@
             padding: 1.5rem;
             border-radius: 1rem;
             border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s;
+            position: relative;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 600;
         }
         .service-card h2 {
             margin-bottom: 0.5rem;
@@ -113,8 +129,13 @@
             margin: 1rem 0 0.5rem;
         }
         .price-small {
-            font-size: 1rem;
+            font-size: 0.875rem;
             color: #94a3b8;
+        }
+        .price-note {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 0.5rem;
         }
         .cta-button {
             display: inline-block;
@@ -151,6 +172,10 @@
         h2 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
+        }
+        .audit-card {
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.3);
         }
         @media (max-width: 640px) {
             h1 { font-size: 2rem; }
@@ -199,27 +224,46 @@
             </div>
             
             <div class="services">
-                <div class="service-card">
-                    <h2>⚡ Performance Fix</h2>
-                    <p>Your site is slow. Visitors are leaving. I fix it.</p>
-                    <div class="price">From $800</div>
-                    <div class="price-small">90+ PageSpeed guaranteed</div>
+                <!-- Speed Audit Only – Low barrier entry -->
+                <div class="service-card audit-card">
+                    <h2>🔍 Speed Audit Only</h2>
+                    <p>Full Lighthouse report + 30-min consultation + recommended fixes (you implement).</p>
+                    <div class="price">$497</div>
+                    <div class="price-small">One-time • 48-hour delivery</div>
+                    <div class="price-note">Perfect for DIY or in-house teams</div>
                 </div>
+
+                <!-- Essential Speed Fix -->
                 <div class="service-card">
-                    <h2>🦷 Local Business Package</h2>
-                    <p>Mobile score 40 → 90+ guaranteed. Appointment-ready in 5 days.</p>
-                    <div class="price">$2,200</div>
-                    <div class="price-small">Most popular</div>
+                    <h2>⚡ Essential Speed Fix</h2>
+                    <p>Core speed optimization, basic accessibility, 30 days support.</p>
+                    <div class="price">$1,350</div>
+                    <div class="price-small">One-time • 3–5 day delivery</div>
+                    <div class="price-note">Get your site fast and mobile-friendly</div>
                 </div>
+
+                <!-- Practice Accelerator – Most Popular -->
                 <div class="service-card">
-                    <h2>🔍 SEO + Speed</h2>
-                    <p>Technical SEO audit + performance fix. Rank higher, load faster.</p>
-                    <div class="price">From $1,200</div>
+                    <div class="popular-badge">⭐ MOST POPULAR</div>
+                    <h2>🚀 Practice Accelerator</h2>
+                    <p>Full speed + ADA compliance + Local SEO + GBP optimization + 60 days support.</p>
+                    <div class="price">$2,850</div>
+                    <div class="price-small">One-time • 5–7 day delivery</div>
+                    <div class="price-note">Turn your website into a new patient machine</div>
+                </div>
+
+                <!-- Market Dominator -->
+                <div class="service-card">
+                    <h2>🏆 Market Dominator</h2>
+                    <p>Everything in Accelerator + 3 months ongoing support + monthly reporting.</p>
+                    <div class="price">$4,500</div>
+                    <div class="price-small">One-time • 7–10 day delivery</div>
+                    <div class="price-note">Complete speed, compliance, and local SEO domination</div>
                 </div>
             </div>
 
-            <div style="text-align: center;">
-                <a href="mailto:laborflowusa@gmail.com" class="cta-button">📧 Get Free Speed Report →</a>
+            <div style="text-align: center; margin: 1rem 0 2rem 0;">
+                <a href="mailto:laborflowusa@gmail.com?subject=Free%20Speed%20Report%20Request&body=My%20website%20URL%20is%3A%20" class="cta-button">📧 Get Free Speed Report →</a>
             </div>
             
             <div class="proof-link">
