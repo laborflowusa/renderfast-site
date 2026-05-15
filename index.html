@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="TGpWkHEwiodMUCcCHaThDbRay5z30KBOmsSOeyox2XA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>RenderFast – Fast Websites Guaranteed | 100/100 PageSpeed</title>
-    <meta name="description" content="RenderFast builds 90+ PageSpeed websites for dental practices, medical offices, law firms, and local businesses. Guaranteed or free.">
-    <meta name="author" content="Will Gonzalez - RENDERFAST | VOYAGER WEB DEVELOPMENT">
+    <title>VOYAGER WEB DEVELOPMENT – Fast Websites Guaranteed | 100/100 PageSpeed</title>
+    <meta name="description" content="VOYAGER WEB DEVELOPMENT builds 90+ PageSpeed websites for dental practices, medical offices, law firms, and local businesses. Guaranteed or free.">
+    <meta name="author" content="Will Gonzalez - VOYAGER WEB DEVELOPMENT">
     
     <style>
         * {
@@ -29,7 +28,6 @@
             margin: 0 auto;
         }
         
-        /* HIGH CONTRAST BADGE - Accessibility Fix #1 */
         .badge {
             display: inline-block;
             background: #065f46;
@@ -45,21 +43,31 @@
         h1 {
             font-size: 3.5rem;
             font-weight: 800;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             background: linear-gradient(135deg, #ffffff, #94a3b8);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
         }
         
-        .highlight {
-            color: #10b981;
-        }
-        
         .tagline {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
             color: #cbd5e1;
+        }
+        
+        .guarantee {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.2);
+            border: 1px solid #10b981;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+        
+        .highlight {
+            color: #10b981;
         }
         
         .score-grid {
@@ -84,7 +92,6 @@
             color: #10b981;
         }
         
-        /* ADA COMPLIANCE SECTION - High contrast */
         .alert-card {
             background: rgba(239, 68, 68, 0.15);
             border-left: 4px solid #ef4444;
@@ -93,7 +100,7 @@
             margin: 2rem 0;
         }
         
-        .alert-card h3 {
+        .alert-card h2 {
             color: #fca5a5;
             margin-bottom: 0.5rem;
             font-size: 1.25rem;
@@ -131,7 +138,6 @@
             margin-top: 1rem;
         }
         
-        /* HIGH CONTRAST INDUSTRY TAGS */
         .industry-tag {
             background: rgba(16, 185, 129, 0.2);
             padding: 0.5rem 1rem;
@@ -143,12 +149,11 @@
         
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
         
-        /* HIGH CONTRAST SERVICE CARDS */
         .service-card {
             background: rgba(255,255,255,0.06);
             padding: 1.75rem;
@@ -193,7 +198,6 @@
             margin-bottom: 0.75rem !important;
         }
         
-        /* HIGH CONTRAST BUTTON - Accessibility Fix #2 */
         .cta-button {
             display: inline-block;
             background: #2c7da0;
@@ -215,7 +219,6 @@
             color: #ffffff;
         }
         
-        /* HIGH CONTRAST LINKS */
         a {
             color: #60a5fa;
             text-decoration: none;
@@ -238,10 +241,6 @@
             font-weight: 600;
         }
         
-        .proof-link a:hover {
-            text-decoration: underline;
-        }
-        
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -251,9 +250,10 @@
             padding-top: 2rem;
         }
         
-        h2 {
+        .section-title {
             font-size: 1.75rem;
             margin-bottom: 1rem;
+            text-align: center;
             color: #f1f5f9;
         }
         
@@ -263,10 +263,6 @@
             border-radius: 1rem;
             text-align: center;
             margin: 2rem 0;
-        }
-        
-        .contact-info p {
-            margin: 0.5rem 0;
         }
         
         @media (max-width: 640px) {
@@ -280,17 +276,16 @@
 <body>
     <main>
         <div class="container">
-            <!-- HIGH CONTRAST BADGE - Fixed -->
             <div class="badge">⚡ 100/100 PageSpeed (Mobile) – Verified</div>
             
-            <h1>RenderFast</h1>
+            <h1>VOYAGER WEB DEVELOPMENT</h1>
             <div class="tagline">Fast websites. <span class="highlight">Guaranteed.</span></div>
+            <div class="guarantee">🎯 90+ PageSpeed Score or you pay nothing</div>
             
             <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
                 I build websites that score <strong>90+ on Google PageSpeed Insights (mobile)</strong> – or I work for free.
             </p>
             
-            <!-- SCORE GRID -->
             <div class="score-grid">
                 <div class="score-card">
                     <div class="score-number">100/100</div>
@@ -310,7 +305,6 @@
                 </div>
             </div>
             
-            <!-- ADA COMPLIANCE WARNING - Important for Dentists -->
             <div class="alert-card">
                 <h2>⚠️ ADA Compliance Risk is Real</h2>
                 <p>Dental and medical offices are frequent targets for accessibility lawsuits. Over 4,000 ADA website lawsuits were filed in 2025, with average settlements of $5k–$25k+.</p>
@@ -323,9 +317,8 @@
                 <p style="margin-top: 0.75rem;"><strong>All my packages include ADA compliance fixes to protect your business.</strong></p>
             </div>
             
-            <!-- INDUSTRIES -->
             <div class="industries">
-                <h2>Who I Help</h2>
+                <h2 class="section-title">Who I Help</h2>
                 <div class="industries-grid">
                     <span class="industry-tag">🦷 Dental Practices</span>
                     <span class="industry-tag">🩺 Medical Offices</span>
@@ -338,12 +331,11 @@
                 </div>
             </div>
             
-            <!-- SERVICE PACKAGES - COMPLETE LIST -->
-            <h2 style="text-align: center;">Performance Packages</h2>
+            <h2 class="section-title">Performance Packages</h2>
             <div class="services">
                 <div class="service-card">
                     <h3>🔍 Speed Audit Only</h3>
-                    <p>Full Lighthouse report + 30-min consultation + recommended fixes (you implement).</p>
+                    <p>Full Lighthouse report + consultation (recorded video or written) + recommended fixes checklist.</p>
                     <div class="price">$497</div>
                     <div class="price-small">One-time • 48-hour delivery</div>
                     <div>Perfect for DIY or in-house teams</div>
@@ -353,7 +345,7 @@
                 <div class="service-card">
                     <div class="popular-badge">⭐ MOST POPULAR</div>
                     <h3>⚡ Essential Speed Fix</h3>
-                    <p>Core speed optimization, basic accessibility, 30 days support.</p>
+                    <p>Core speed optimization, basic accessibility, 30 days support. 90+ score guaranteed.</p>
                     <div class="price">$1,350</div>
                     <div class="price-small">One-time • 3–5 day delivery</div>
                     <div>Get your site fast and mobile-friendly</div>
@@ -379,28 +371,24 @@
                 </div>
             </div>
             
-            <!-- CONTACT SECTION - HIGH CONTRAST BUTTON -->
             <div class="contact-info">
                 <h3>📋 Request Your Free Website Audit</h3>
                 <p>Click the button below to request your free audit. I'll respond within 24 hours.</p>
-                <a href="mailto:laborflowusa@gmail.com?subject=Free%20Audit%20Request%20from%20RenderFast" class="cta-button">📧 Click Here to Request Free Audit →</a>
-                <p style="margin-top: 1rem; font-size: 0.85rem;">📧 Email is best – I respond within 24 hours. I do not use phone due to voice limitations, but I am highly responsive via email.</p>
+                <a href="mailto:laborflowusa@gmail.com?subject=Free%20Audit%20Request" class="cta-button">📧 Click Here to Request Free Audit →</a>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">📧 Email is best – I respond within 24 hours.</p>
             </div>
             
-            <!-- PROOF LINK -->
             <div class="proof-link">
-                🧭 <strong>Live proof:</strong> <a href="https://voyager-flask.onrender.com" target="_blank">VOYAGER-X – 100/100 PageSpeed Portfolio</a>
+                🔍 <a href="https://pagespeed.web.dev/analysis?url=https://voyager-renderfast.onrender.com" target="_blank" rel="noopener noreferrer">Verify my 100/100 score on Google PageSpeed →</a>
             </div>
             
-            <!-- FOOTER WITH CONTACT -->
             <footer>
-    <p>🔍 <a href="https://pagespeed.web.dev/analysis?url=https://voyager-renderfast.onrender.com" target="_blank" rel="noopener noreferrer">Verify my 100/100 score on Google PageSpeed →</a></p>
-    <p><strong>Will Gonzalez</strong> | RENDERFAST | VOYAGER WEB DEVELOPMENT</p>
-    <p>📧 laborflowusa@gmail.com | 🌐 https://voyager-renderfast.onrender.com</p>
-    <p>Serving Allentown, PA & Lehigh Valley – and clients nationwide</p>
-    <p>Fast websites. Guaranteed. 90+ PageSpeed or you pay nothing.</p>
-</footer>
+                <p><strong>Will Gonzalez</strong> | VOYAGER WEB DEVELOPMENT</p>
+                <p>📧 laborflowusa@gmail.com | 🌐 https://voyager-renderfast.onrender.com</p>
+                <p>Serving Allentown, PA & Lehigh Valley – and clients nationwide</p>
+                <p>Fast websites. Guaranteed. 90+ PageSpeed or you pay nothing.</p>
+            </footer>
         </div>
     </main>
 </body>
-</html>>
+</html>
