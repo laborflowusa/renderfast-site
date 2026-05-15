@@ -211,6 +211,7 @@
             border: none;
             cursor: pointer;
             font-size: 1rem;
+            font-family: inherit;
         }
         
         .cta-button:hover {
@@ -265,11 +266,35 @@
             margin: 2rem 0;
         }
         
+        .toast-notification {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: #1a1a1a;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            animation: fadeInOut 2.5s ease forwards;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; bottom: 0; }
+            15% { opacity: 1; bottom: 30px; }
+            85% { opacity: 1; bottom: 30px; }
+            100% { opacity: 0; bottom: 0; visibility: hidden; }
+        }
+        
         @media (max-width: 640px) {
             h1 { font-size: 2.25rem; }
             body { padding: 1rem; }
             .service-card { padding: 1.25rem; }
             .price { font-size: 1.5rem; }
+            .cta-button { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -339,7 +364,7 @@
                     <div class="price">$497</div>
                     <div class="price-small">One-time • 48-hour delivery</div>
                     <div>Perfect for DIY or in-house teams</div>
-                    <a href="mailto:laborflowusa@gmail.com?subject=Speed%20Audit%20Request" class="cta-button">Request Audit →</a>
+                    <button onclick="copyEmailForAudit()" class="cta-button">📋 Copy Email to Request Audit →</button>
                 </div>
                 
                 <div class="service-card">
@@ -349,7 +374,7 @@
                     <div class="price">$1,350</div>
                     <div class="price-small">One-time • 3–5 day delivery</div>
                     <div>Get your site fast and mobile-friendly</div>
-                    <a href="mailto:laborflowusa@gmail.com?subject=Essential%20Speed%20Fix" class="cta-button">Get Started →</a>
+                    <button onclick="copyEmailForPackage('Essential Speed Fix')" class="cta-button">📋 Copy Email to Get Started →</button>
                 </div>
                 
                 <div class="service-card">
@@ -358,7 +383,7 @@
                     <div class="price">$2,850</div>
                     <div class="price-small">One-time • 5–7 day delivery</div>
                     <div>Turn your website into a new patient machine</div>
-                    <a href="mailto:laborflowusa@gmail.com?subject=Practice%20Accelerator" class="cta-button">Get Started →</a>
+                    <button onclick="copyEmailForPackage('Practice Accelerator')" class="cta-button">📋 Copy Email to Get Started →</button>
                 </div>
                 
                 <div class="service-card">
@@ -367,15 +392,15 @@
                     <div class="price">$4,500</div>
                     <div class="price-small">One-time • 7–10 day delivery</div>
                     <div>Complete speed, compliance, and local SEO domination</div>
-                    <a href="mailto:laborflowusa@gmail.com?subject=Market%20Dominator" class="cta-button">Get Started →</a>
+                    <button onclick="copyEmailForPackage('Market Dominator')" class="cta-button">📋 Copy Email to Get Started →</button>
                 </div>
             </div>
             
             <div class="contact-info">
                 <h3>📋 Request Your Free Website Audit</h3>
-                <p>Click the button below to request your free audit. I'll respond within 24 hours.</p>
-                <a href="mailto:laborflowusa@gmail.com?subject=Free%20Audit%20Request" class="cta-button">📧 Click Here to Request Free Audit →</a>
-                <p style="margin-top: 1rem; font-size: 0.85rem;">📧 Email is best – I respond within 24 hours.</p>
+                <p>Click the button below to copy my email address. Gmail will open automatically.</p>
+                <button onclick="copyEmailAndOpenGmail()" class="cta-button">📋 Copy Email & Open Gmail →</button>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">📧 I respond within 24 hours. No Outlook needed.</p>
             </div>
             
             <div class="proof-link">
@@ -390,5 +415,51 @@
             </footer>
         </div>
     </main>
+
+    <script>
+        // Show temporary notification
+        function showNotification(message) {
+            const existing = document.querySelector('.toast-notification');
+            if (existing) existing.remove();
+            
+            const notification = document.createElement('div');
+            notification.className = 'toast-notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                if (notification && notification.remove) notification.remove();
+            }, 2500);
+        }
+        
+        // Copy email for audit requests
+        function copyEmailForAudit() {
+            navigator.clipboard.writeText("laborflowusa@gmail.com").then(() => {
+                showNotification("✓ Email copied! Subject: Free Audit Request");
+            }).catch(() => {
+                showNotification("❌ Please email laborflowusa@gmail.com manually");
+            });
+        }
+        
+        // Copy email for specific packages
+        function copyEmailForPackage(packageName) {
+            navigator.clipboard.writeText("laborflowusa@gmail.com").then(() => {
+                showNotification("✓ Email copied! Subject: " + packageName);
+            }).catch(() => {
+                showNotification("❌ Please email laborflowusa@gmail.com manually");
+            });
+        }
+        
+        // Copy email AND open Gmail (best for main CTA)
+        function copyEmailAndOpenGmail() {
+            navigator.clipboard.writeText("laborflowusa@gmail.com").then(() => {
+                showNotification("✓ Email copied! Opening Gmail...");
+                window.open("https://mail.google.com/mail/?view=cm&fs=1&to=laborflowusa@gmail.com", "_blank");
+            }).catch(() => {
+                showNotification("❌ Opening Gmail... please email laborflowusa@gmail.com");
+                window.open("https://mail.google.com/mail/?view=cm&fs=1&to=laborflowusa@gmail.com", "_blank");
+            });
+        }
+    </script>
 </body>
 </html>
